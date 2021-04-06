@@ -63,7 +63,7 @@ def handle_dialog(res, req):
 
     else:
         for entity in req['request']['nlu']['tokens']:
-            name = name + ' ' + entity
+            name = entity
         qcreq = QuakeReq(name)
         qcinf = qcreq.full_info()
         res['response']['text'] = qcinf
